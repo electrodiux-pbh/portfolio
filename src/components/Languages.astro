@@ -1,0 +1,40 @@
+---
+const languages = [
+  {
+    name: "Spanish",
+    level: "Native",
+    bar: "w-full",
+  },
+  {
+    name: "English",
+    level: "B2 Certified",
+    bar: "w-5/6",
+  },
+  {
+    name: "Japanese",
+    level: "N4 (A2-B1)",
+    bar: "w-2/5",
+  },
+];
+---
+
+<section id="languages" class="py-20 bg-slate-900/30">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 text-center text-white">Languages</h2>
+    <div class="space-y-6">
+      {
+        languages.map((lang) => (
+          <div>
+            <div class="flex justify-between mb-1">
+              <span class="font-bold text-lg text-slate-200">{lang.name}</span>
+              <span class="text-sm text-slate-400">{lang.level}</span>
+            </div>
+            <div class="w-full bg-slate-700 rounded-full h-2.5">
+              <div class:list={["bg-cyan-600 h-2.5 rounded-full", lang.bar]} />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

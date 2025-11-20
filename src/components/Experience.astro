@@ -1,0 +1,41 @@
+---
+const experiences = [
+  {
+    role: "Founder & Lead Developer",
+    company: "Electrodiux",
+    period: "2022 - Present",
+    description:
+      "Leading the development of 'Industrialized', a complex civilization building game. Responsible for engine architecture, game design, and software development.",
+  },
+];
+---
+
+<section id="experience" class="py-20">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-12 text-center text-white">Experience</h2>
+    <div class="relative border-l-2 border-slate-700">
+      {
+        experiences.map((exp, index) => (
+          <div class="mb-10 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-cyan-600 rounded-full -left-3 ring-8 ring-slate-900">
+              <svg class="w-2.5 h-2.5 text-cyan-100" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
+                <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+              </svg>
+            </span>
+            <h3 class="flex items-center mb-1 text-xl font-semibold text-white">
+              {exp.role}
+              {index === 0 && (
+                <span class="bg-cyan-900/50 text-cyan-400 text-sm font-medium me-2 px-2.5 py-0.5 rounded-full ms-3 border border-cyan-500/30">Latest</span>
+              )}
+            </h3>
+            <time class="block mb-2 text-sm font-normal leading-none text-slate-500">
+              {exp.company} | {exp.period}
+            </time>
+            <p class="text-base font-normal text-slate-400">{exp.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

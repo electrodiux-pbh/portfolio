@@ -1,0 +1,31 @@
+---
+import { MdCode } from "react-icons/md";
+
+interface ProjectCardProps {
+  title: string;
+  desc: string;
+  tech: string[];
+  link: string;
+  color: string;
+}
+
+const { title, desc, tech, link, color } = Astro.props as ProjectCardProps;
+---
+
+<a
+  href={link}
+  class={`block group p-8 bg-slate-950 rounded-2xl border-t-4 ${color} hover:-translate-y-2 transition-all duration-300 shadow-2xl hover:shadow-cyan-900/20`}
+>
+  <div class="flex justify-between items-start mb-4">
+    <h3 class="text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+      {title}
+    </h3>
+    <div class="text-slate-500 group-hover:text-white">
+      <MdCode size={24} />
+    </div>
+  </div>
+  <p class="text-slate-400 mb-6 h-20">{desc}</p>
+  <div class="flex gap-2 flex-wrap">
+    {tech.map((t) => <span class="px-3 py-1 text-sm bg-slate-900 text-cyan-200 rounded-full border border-slate-800">{t}</span>)}
+  </div>
+</a>

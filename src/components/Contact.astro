@@ -1,0 +1,67 @@
+---
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FiMail } from "react-icons/fi";
+
+const contacts = [
+  {
+    name: "GitHub",
+    link: "https://github.com/electrodiux-pbh",
+    icon: FaGithub,
+    handle: "@electrodiux-pbh",
+  },
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/pablo-bermejo-hernandez/",
+    icon: FaLinkedin,
+    handle: "Pablo Bermejo Hernandez",
+  },
+  {
+    name: "Email",
+    link: "mailto:jobs@pablobh.com",
+    icon: FiMail,
+    handle: "jobs@pablobh.com",
+  },
+  {
+    name: "X",
+    link: "https://x.com/electrodiux_pbh",
+    icon: FaXTwitter,
+    handle: "@electrodiux_pbh",
+  },
+  {
+    name: "Instagram",
+    link: "https://instagram.com/electrodiux_pbh",
+    icon: FaInstagram,
+    handle: "@electrodiux_pbh",
+  },
+];
+---
+
+<section id="contact" class="py-20">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4 text-center text-white">Get in Touch</h2>
+    <p class="text-slate-400 text-lg mb-12 text-center max-w-2xl mx-auto">
+      I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {
+        contacts.map((contact) => (
+          <a
+            href={contact.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-800/50 p-6 rounded-lg text-center transition-all duration-300 hover:bg-slate-800 hover:scale-105 group"
+            aria-label={contact.name}
+          >
+            <div class="flex justify-center mb-4">
+              <contact.icon className="w-12 h-12 text-cyan-400 transition-transform group-hover:scale-110" />
+            </div>
+            <h3 class="text-xl font-bold text-white mb-1">{contact.name}</h3>
+            <p class="text-slate-400">{contact.handle}</p>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

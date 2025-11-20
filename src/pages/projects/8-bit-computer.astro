@@ -1,0 +1,27 @@
+---
+import ProjectLayout from "@layouts/ProjectLayout.astro";
+
+const project = {
+  title: "8-bit Computer",
+  description: "A fully functional 8-bit computer built from scratch using simple logic gates on a breadboard, capable of running simple programs.",
+  tech: ["Hardware", "Digital Logic", "Assembly", "Electronics", "Low-Level"],
+};
+---
+
+<ProjectLayout {...project}>
+  <div class="prose prose-invert prose-lg mx-auto">
+    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante tincidunt placerat. Nullam nec metus vel ante tincidunt placerat.</p>
+
+    <div class="my-8">
+      <img src="/projects/8-bit-computer/8-bit-computer.png" alt="8-bit Computer" class="rounded-lg shadow-lg" />
+      <p class="text-center text-sm text-slate-500 mt-2">The completed 8-bit computer on breadboards.</p>
+    </div>
+
+    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante tincidunt placerat. Nullam nec metus vel ante tincidunt placerat.</p>
+
+    <div class="my-8">
+      <img src="/projects/8-bit-computer/early-stage.jpg" alt="8-bit Computer" class="rounded-lg shadow-lg" />
+      <p class="text-center text-sm text-slate-500 mt-2">The completed 8-bit computer on breadboards.</p>
+    </div>
+  </div>
+</ProjectLayout>
