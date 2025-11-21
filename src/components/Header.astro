@@ -1,12 +1,14 @@
 ---
 import { ChartBarIcon, CubeIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
 import { MdCode } from "react-icons/md";
+
+const is_root_page = Astro.url.pathname === "/";
 ---
 
 <header class="fixed top-0 left-0 w-full z-50 bg-slate-950/50 backdrop-blur-sm">
   <div class="max-w-6xl mx-auto px-4">
     <div class="flex justify-between items-center h-16">
-      <a href="/" class="flex items-center gap-2 text-white font-bold text-lg">
+      <a href={is_root_page ? "#" : "/"} class="flex items-center gap-2 text-white font-bold text-lg">
         <MdCode className="w-6 h-6 text-cyan-400" />
         <span>Pablo Bermejo</span>
       </a>

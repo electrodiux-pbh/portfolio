@@ -10,18 +10,54 @@ const project = {
 
 <ProjectLayout {...project}>
   <div class="prose prose-invert prose-lg mx-auto">
-    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante tincidunt placerat. Nullam nec metus vel ante tincidunt placerat.</p>
+    <h3 class="text-2xl font-bold mb-4">What I learned from this project?</h3>
+    <p class="mb-4">
+      Building an 8-bit computer from the ground up on breadboards has been one of my most formative projects. While inspired by Ben Eater's renowned series, I
+      challenged myself to go beyond simple replication. I expanded upon the original design, engineering significant upgrades such as increasing the memory to
+      4KB of RAM, implementing a 12-bit address bus, creating a dynamically sized instruction set, and integrating a custom 8x8 LED matrix and audio output.
+    </p>
+
+    <p class="mb-4">
+      This project was a deep dive into the fundamental workings of a computer. It demystified low-level concepts like memory addressing and pointers, fostering
+      a profound appreciation for the abstractions we rely on in modern computing. More importantly, it sparked my curiosity about advanced topics like
+      operating systems, concurrency, and computer architecture, setting me on a path to explore the deeper fundamentals of computer science and expanding my
+      knowledge.
+    </p>
 
     <div class="my-8">
-      <img src="/projects/8-bit-computer/8-bit-computer.png" alt="8-bit Computer" class="rounded-lg shadow-lg" />
+      <img src="/projects/8-bit-computer/8-bit-computer.webp" alt="8-bit Computer" class="rounded-lg shadow-lg" />
       <p class="text-center text-sm text-slate-500 mt-2">The completed 8-bit computer on breadboards.</p>
     </div>
 
-    <p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec metus vel ante tincidunt placerat. Nullam nec metus vel ante tincidunt placerat.</p>
+    <h3 class="text-2xl font-bold mb-4">The Engineering Challenges</h3>
+
+    <p class="mb-4">
+      It's important to note that this design intentionally deviates from modern best practices, such as using multiple registers or a dedicated stack. These
+      constraints were not just limitations but creative catalysts. Working with limited resources forced me to devise unconventional solutions and develop a
+      more intuitive understanding of hardware-level problem-solving.
+    </p>
 
     <div class="my-8">
-      <img src="/projects/8-bit-computer/early-stage.jpg" alt="8-bit Computer" class="rounded-lg shadow-lg" />
-      <p class="text-center text-sm text-slate-500 mt-2">The completed 8-bit computer on breadboards.</p>
+      <img src="/projects/8-bit-computer/early-stage.webp" alt="8-bit Computer" class="rounded-lg shadow-lg" />
+      <p class="text-center text-sm text-slate-500 mt-2">An early stage of the computer.</p>
+    </div>
+
+    <h3 class="text-2xl font-bold mt-12 mb-4">Future Roadmap</h3>
+    <p class="mb-4">
+      While time and resource constraints have paused active development, I have a clear roadmap for future enhancements. Key goals include developing a VGA
+      interface for video output, creating a dedicated input system, and implementing a basic BIOS to support a command-line interface. These additions would
+      transform the machine from a low-level demonstrator into a more interactive and capable microcomputer.
+    </p>
+
+    <h3 class="text-2xl font-bold mt-12 mb-4">Demonstration Video</h3>
+    <div class="aspect-[9/16] my-8 max-w-sm mx-auto">
+      <iframe
+        src="https://www.youtube.com/embed/h3Agst-AdkU"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        class="w-full h-full rounded-lg shadow-lg"></iframe>
     </div>
   </div>
 </ProjectLayout>

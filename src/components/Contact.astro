@@ -1,38 +1,40 @@
 ---
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
+
+import contactsData from "@data/contacts.json";
 
 const contacts = [
   {
     name: "GitHub",
-    link: "https://github.com/electrodiux-pbh",
+    ...contactsData.github,
     icon: FaGithub,
-    handle: "@electrodiux-pbh",
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/pablo-bermejo-hernandez/",
+    ...contactsData.linkedin,
     icon: FaLinkedin,
-    handle: "Pablo Bermejo Hernandez",
   },
   {
     name: "Email",
-    link: "mailto:jobs@pablobh.com",
+    ...contactsData.email,
     icon: FiMail,
-    handle: "jobs@pablobh.com",
-  },
-  {
-    name: "X",
-    link: "https://x.com/electrodiux_pbh",
-    icon: FaXTwitter,
-    handle: "@electrodiux_pbh",
   },
   {
     name: "Instagram",
-    link: "https://instagram.com/electrodiux_pbh",
+    ...contactsData.instagram,
     icon: FaInstagram,
-    handle: "@electrodiux_pbh",
+  },
+  {
+    name: "Discord",
+    ...contactsData.discord,
+    icon: FaDiscord,
+  },
+  {
+    name: "X",
+    ...contactsData.twitter,
+    icon: FaXTwitter,
   },
 ];
 ---
