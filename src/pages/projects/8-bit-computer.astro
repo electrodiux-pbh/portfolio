@@ -6,6 +6,17 @@ const project = {
   description: "A fully functional 8-bit computer built from scratch using simple logic gates on a breadboard, capable of running simple programs.",
   tech: ["Hardware", "Digital Logic", "Assembly", "Electronics", "Low-Level"],
 };
+
+const shorts = [
+  {
+    id: "h3Agst-AdkU",
+    title: "8-bit computer demo",
+  },
+  {
+    id: "C-mAIQeX82E",
+    title: "8-bit computer playing a song",
+  },
+];
 ---
 
 <ProjectLayout {...project}>
@@ -49,15 +60,22 @@ const project = {
       transform the machine from a low-level demonstrator into a more interactive and capable microcomputer.
     </p>
 
-    <h3 class="text-2xl font-bold mt-12 mb-4">Demonstration Video</h3>
-    <div class="aspect-[9/16] my-8 max-w-sm mx-auto">
-      <iframe
-        src="https://www.youtube.com/embed/h3Agst-AdkU"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-        class="w-full h-full rounded-lg shadow-lg"></iframe>
+    <h3 class="text-2xl font-bold mt-12 mb-4">Demonstration Videos</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 my-8">
+      {
+        shorts.map((short) => (
+          <div class="aspect-9/16">
+            <iframe
+              src={`https://www.youtube.com/embed/${short.id}`}
+              title={short.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              class="w-full h-full rounded-lg shadow-lg"
+            />
+          </div>
+        ))
+      }
     </div>
   </div>
 </ProjectLayout>
