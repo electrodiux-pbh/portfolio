@@ -15,22 +15,28 @@ const projects = [
     title: "8-bit Computer",
     desc: "A fully functional 8-bit computer built from scratch using simple logic gates on a breadboard, capable of running simple programs.",
     tech: ["Hardware", "Digital Logic", "Assembly"],
-    link: "/projects/8-bit-computer",
-    color: "border-red-500",
+    link: {
+      href: "/projects/8-bit-computer",
+      blank: false,
+    },
+    color: "red",
   },
   {
     title: "Industrialized",
     desc: "A civilization building game focused on automation, logistics, and resource management. Currently in development under Electrodiux.",
     tech: ["C++", "Game Design", "OpenGL", "Vulkan", "Software Architecture"],
     link: undefined,
-    color: "border-cyan-500",
+    color: "emerald",
   },
   {
     title: "Java Game Engine",
     desc: "A custom game engine built from scratch in Java, demonstrating low-level graphics programming capabilities.",
     tech: ["Java", "OpenGL", "Jbox2D"],
-    link: "https://github.com/electrodiux-pbh/java-game-engine",
-    color: "border-purple-500",
+    link: {
+      href: "https://github.com/electrodiux-pbh/java-game-engine",
+      blank: true,
+    },
+    color: "purple",
   },
 ];
 
