@@ -1,0 +1,62 @@
+---
+import ProjectLayout from "@layouts/ProjectLayout.astro";
+
+const project = {
+  title: "Voxel Engines",
+  description:
+    "A journey through the creation of multiple voxel game engines from scratch, showcasing my growth in low-level programming, system architecture, and graphics rendering.",
+  tech: ["Java", "C++", "OpenGL", "Voxel", "Game Development"],
+};
+
+const images = [
+  { src: "/projects/voxel-engines/first-attemp.webp", alt: "First attempt at a voxel engine", caption: "My first attempt at creating a voxel engine." },
+  { src: "/projects/voxel-engines/terrain.webp", alt: "Procedurally generated terrain", caption: "Procedurally generated terrain with basic lighting." },
+  { src: "/projects/voxel-engines/flowers.webp", alt: "Voxel flowers in the terrain", caption: "Added foliage like flowers to the terrain." },
+  { src: "/projects/voxel-engines/logs.webp", alt: "Voxel logs in the terrain", caption: "Testing object placement with logs." },
+  { src: "/projects/voxel-engines/landscape.webp", alt: "A beautiful voxel landscape", caption: "A more complex and beautiful landscape." },
+  { src: "/projects/voxel-engines/terrain-with-entities.webp", alt: "Terrain with some entities", caption: "The beginnings of entity implementation." },
+  { src: "/projects/voxel-engines/specular-ilumination.webp", alt: "Specular illumination test", caption: "Experimenting with specular illumination." },
+  { src: "/projects/voxel-engines/lightninght.webp", alt: "Lightning effects", caption: "Implementing dynamic lighting effects." },
+  { src: "/projects/voxel-engines/isometric.webp", alt: "Isometric camera view", caption: "An isometric camera perspective." },
+];
+---
+
+<ProjectLayout {...project}>
+  <div class="prose prose-invert prose-lg mx-auto">
+    <h3 class="text-2xl font-bold mb-4">The Spark of Creation: My First Voxel Engines</h3>
+    <p class="mb-4">
+      My journey into game engine development began with a fascination for voxel-based worlds. Over the years, I've developed multiple voxel engines from
+      scratch, each one a stepping stone in my understanding of OpenGL and low-level programming. I started with Java, the first language I mastered, and used
+      it to build my initial engine. This foundational experience was crucial, as it stablished a solid knowledge base.
+    </p>
+
+    <h3 class="text-2xl font-bold mt-12 mb-4">Pushing the Boundaries: From Java to C++</h3>
+    <p class="mb-4">
+      Driven by a desire to learn C++ as a new language, I decided to transition my engine to C++ as a learning experience for the language and more
+      voxel-stuff. This was a significant learning curve, but it provided an invaluable opportunity to delve into memory management, performance optimization,
+      and system architecture. Sadly, many of these early iterations are lost to time, but the lessons learned have been foundational to my growth as a
+      developer.
+    </p>
+
+    <h3 class="text-2xl font-bold mt-12 mb-4">A Lost Legacy, A Future Vision</h3>
+    <p class="mb-4">
+      While the code from my past projects may be gone, the knowledge and experience I gained are not. These projects have given me a profound appreciation for
+      the complexities of game development and graphics programming. Now, with a wealth of experience behind me, I am channeling my passion into a new
+      voxel-based game called "Industrialized," under my personal brand, Electrodiux.
+    </p>
+
+    <h3 class="text-2xl font-bold mt-12 mb-4">Visual Showcase: A Journey Through Voxel Worlds</h3>
+    <p class="mb-4">Here is a gallery of images from my various voxel engine projects over the years, showcasing the evolution of my work.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 my-8">
+      {
+        images.map((image) => (
+          <div>
+            <img src={image.src} alt={image.alt} class="w-full aspect-video object-cover rounded-lg shadow-lg" />
+            <p class="text-center text-sm text-slate-500 mt-2">{image.caption}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</ProjectLayout>
